@@ -9,7 +9,8 @@ int count_characters(FILE *file) {
     int count = 0;
     char ch;
     while ((ch = fgetc(file)) != EOF) {
-        count++;
+    	if(ch == ' '|| ch == '\t' || ch =='\n')
+        count++; 
     }
     return count;
 }
